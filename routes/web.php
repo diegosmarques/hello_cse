@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CelebrityController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+
+Route::namespace('App\Http\Controllers')->group(function(){
+    
+    Route::get('/', 'CelebrityController@index');
+
+    Route::prefix('celebrity')->group(function(){
+        Route::get('/', 'CelebrityController@index');
+        Route::get('/show/{id}', 'CelebrityController@show');
+        Route::get('/edit/{id}', 'CelebrityController@edit');
+        Route::get('/image/{filename}', 'CelebrityController@displayImage')->name('image.displayImage');
+        Route::put('/update', 'CelebrityController@update');
+    });
+
+    Route::resource('celebrity', 'CelebrityController');
+
+    
 });

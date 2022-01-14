@@ -10,6 +10,6 @@ class Celebrity extends Model
     use HasFactory;
 
     protected $fillable = [
-        'name', 'surnmane', 'description', 'image_path'
+        'name', 'surname', 'description', 'image_path'
     ];
 }
