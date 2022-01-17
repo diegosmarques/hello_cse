@@ -1,0 +1,196 @@
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css";
+
+*{
+box-sizing:border-box;
+}
+body {
+font-family:"Raleway";
+}
+
+.tabs {
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+width:70%;
+height:80%;
+background:#ffffff;
+
+overflow:hidden;
+}
+.tabs .tab-header {
+float:left;
+width:30%;
+height:100%;
+border-right:1px solid #ccc;
+padding-top:40px;
+
+}
+.tabs .tab-header > div {
+height:50px;
+font-size:16px;
+font-weight:500;
+color:#000;
+background:#ccc;
+cursor:pointer;
+padding:10px;
+border:1px solid #cccccc;
+
+
+}
+.tabs .tab-header > div:hover,
+.tabs .tab-header > div.active {
+color:#000000;
+background:#ffffff;
+border-right:0;
+font-weight:600;
+box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+
+}
+.tab-menu:first-child{
+    border-radius:10px 0px 0px 0px;
+}
+
+.tab-menu:last-child{
+    border-radius:0px 0px 0px 10px;
+}
+.tab-menu{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.tabs .tab-content {
+position: relative;
+height:100%;
+overflow-x:hidden;
+overflow-y:auto;
+}
+
+.tabs .tab-content > div {
+position:absolute;
+text-align:justify;
+padding:40px 20px;
+top:-1000%;
+background:#ffffff;
+transition:all 500ms ease-in-out;
+}
+.tabs .tab-content > div.active {
+top:0px;
+}
+.left-img {
+    float: left;
+    border:2px solid #ffffff;
+    margin-right:5%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    width:200px;
+    height:200px;
+}
+
+.form-edit-delete{
+    margin-bottom: 2%;
+}
+
+.div-login{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:50%;
+
+}
+@media screen and (min-width: 700px) and (max-width: 40000000px)  {
+    .tab-phone{
+        display:none;
+    }
+
+    
+    
+}
+@media screen and (min-width: 700px) and (max-width: 1080px)  {
+    .tab-phone{
+        display:none;
+    }
+    .tabs {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 85%;
+    height: 80%;
+
+    }			
+}
+
+@media screen and (min-width: 0px) and (max-width: 699px)  {
+    .tabs {
+    display:none;
+    }
+    .container{
+        max-width: none;
+        width:100% !important;
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    h1{
+        margin: 8%;
+    }
+    .collapsible {
+        height:50px;
+        font-size:16px;
+        font-weight:500;
+        cursor:pointer;
+        padding:10px;
+        border:1px solid #cccccc;
+        width:100%;
+        text-align:left;
+                
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    }
+
+    
+
+    .active, .collapsible:hover {
+        color:#000000;
+        background:#ffffff;
+        border-right:0;
+        font-weight:600;
+        
+    }
+
+    .tab-content{
+        padding-top:2%;
+    }
+
+    .tab-content-group{
+        padding: 5% 0% 5% 0%;
+        text-align: justify;
+    }
+    .tab-content-phone {
+        padding: 0 18px;
+        max-height: 0;
+        overflow: hidden;
+        transition:  0.2s ease-out;
+        background:#ffffff !important;
+
+    
+        
+    }
+    .left-img {
+        float: left;
+        border:2px solid #ffffff;
+        margin-right:5%;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        width:100px;
+        height:100px;
+    }
+
+    .div-login{
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%);
+        width:80%;
+    
+    }
+    
+}

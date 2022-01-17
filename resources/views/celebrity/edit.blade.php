@@ -1,21 +1,14 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+@extends('layout.app')
+@section('content')
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>New Celebrity</title>
+    <title>Edit your Celebrity</title>
 
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-
-    <style>
-        body {
-            font-family: 'Nunito';
-        }
-    </style>
 </head>
-<body>
+
 <!-- if validation in the controller fails, show the errors -->
 @if ($errors->any())
    <div class="alert alert-danger">
@@ -29,12 +22,12 @@
 
 <div>
 
-<form action="/celebrity/update" method="POST" enctype="multipart/form-data">
+<form action="{{route('celebrity.update')}}" method="POST" enctype="multipart/form-data">
         <!-- Add CSRF Token -->
         @csrf
         <input type="hidden" name="_method" value="PUT">
     <div>
-        <input type="text" name="id" value="{{$celebrity->id}}">
+        <input type="hidden" name="id" value="{{$celebrity->id}}">
     </div>    
     <div class="form-group">
         <label>Name</label>
@@ -46,18 +39,18 @@
     </div>
     <div class="form-group">
         <label>Description</label>
-        <textarea  name="description" rows="4" cols="50" class="form-control" required  >
-        {{$celebrity->description}}>
-        </textarea>
+        <textarea  name="description" rows="4" cols="50" class="form-control" required  >{{$celebrity->description}}</textarea>
     </div>
     <div class="form-group">
-        <input type="file" name="file" required>
+    <label for="formFileSm" class="form-label">Chose a picture of the celebrity</label>
+        <input class="form-control form-control-sm" name="file" type="file" >
+        <small>If you want to keep the same photo as before, just don't upload a new file that we gonna keep the old one</small>
+        <small>Accepted files : jpg,jpeg,png,gif,svg | Max size accepted-2MB</small>
     </div>
-    <button type="submit">Submit</button>
+    <button type="submit" class="btn btn-primary mt-2">Save</button>
 </form>
 
 
 
 </div>
-</body>
-</html>
+@endsection

@@ -5,11 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+
 class Celebrity extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'name', 'surname', 'description', 'image_path'
+        'name' ,
+        'surname',
+        'description', 
+        'image_path'
     ];
 }

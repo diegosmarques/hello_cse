@@ -21,19 +21,42 @@
 
     <!-- Styles -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+
+    
 @yield('stylesheet')
 </head>
 <body>
     <div id="app" class="container">
-    <nav class="nav">
-        <a class="nav-link active" aria-current="page" href="{{ route('celebrity.index') }}">Home</a>
-        <a class="nav-link" href="{{ route('celebrity.create') }}">New Celebrity</a>
-        <a class="nav-link ">Logout</a>
-    </nav>
+    @if (Auth::check())
+        <nav class="navbar navbar-light bg-light">
+            <div class="container-fluid">
+            <a class="nav-link active" aria-current="page" href="{{ route('celebrity.index') }}">Home</a>
+                        <a class="nav-link" href="{{ route('celebrity.create') }}">New Celebrity</a>
+                        
+                
+                <form action="{{ route('logout') }}" method="POST" class="d-flex">
+                                <!-- Add CSRF Token -->
+                                @csrf
+                                <button class="btn btn-outline-danger" type="submit">Log out</button>
+                        </form>
+                
+                </form>
+            </div>
+        </nav>
 
         <main>
             @yield('content')
         </main>
+
+    @else
+        <main>
+            @yield('content')
+        </main>
+    @endif
+    
+        
     </div>
 @yield('javascript')
 </body>
