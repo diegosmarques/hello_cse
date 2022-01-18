@@ -8,16 +8,16 @@
 </p>
 
 ## Personal comments
-- [1- Created the project laravel, using composer to install and create a new project]
-- [2- Change the datas on the env file, to make the connection with my local database]
-- [3- Created the repository on git hub to save my project on the cloud]
-- [3- Created my first model Celebrity and then used the terminal to make the first migration to database]
-- [4- Created the CelebrityController so I could treat all the requests regarding the model(Celebrity) (POST, PUT, GET, DELETE).]
-- [5- While working on the CelebrityController, I created the routes and some parts of the frontend]
-- [6- Decided to use Bootsrap to build a friendly back-office where the admin of the website will be able to create,edit,delete the Celebrities of the main page.]
-- [7- Once this part  was done I decide to install the laravel breeze to implement authentication features, including login, registration, password reset, email verification, and password confirmation, I exclude the route registration, once the app will be managed by one person.]
-- [8- Created the front end using the blade template and  HTML, CSS et JavaScritp.]
-- [9- Link to access the backoffice page - http://localhost:8000/login - user:mlind@example.com password:password]
+- 1- Created the project laravel, using composer to install and create a new project
+- 2- Change the datas on the env file, to make the connection with my local database
+- 3- Created the repository on git hub to save my project on the cloud
+- 4- Created my first model Celebrity and then used the terminal to make the first migration to database
+- 5- Created the CelebrityController so I could treat all the requests regarding the model(Celebrity) (POST, PUT, GET, DELETE).
+- 6- While working on the CelebrityController, I created the routes and some parts of the frontend
+- 7- Decided to use Bootsrap to build a friendly back-office where the admin of the website will be able to create,edit,delete the Celebrities of the main page.
+- 8- Once this part  was done I decide to install the laravel breeze to implement authentication features, including login, registration, password reset, email verification, and password confirmation, I exclude the route registration, once the app will be managed by one person.
+- 9- Created the front end using the blade template and  HTML, CSS et JavaScritp.
+- 10- Link to access the backoffice page - http://localhost:8000/login - user:mlind@example.com password:password
 
 
 
